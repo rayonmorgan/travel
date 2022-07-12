@@ -12,7 +12,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 /**
  * N.B. WebSecurityConfigureAdapter: deprecated
- * @author vmadmin
+ * @author Rayon Morgan
  *
  */
 @Configuration

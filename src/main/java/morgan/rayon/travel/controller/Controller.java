@@ -16,7 +16,7 @@ import morgan.rayon.travel.dto.SearchFlight;
 
 /**
  * 
- * @author vmadmin
+ * @author Rayon Morgan
  * API: Entry point, for all public facing api
  */
 @RestController
