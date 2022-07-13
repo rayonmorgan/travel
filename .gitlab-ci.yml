@@ -1,6 +1,11 @@
-stages
+stages:
   - build
   - test
-build app
+build app:
     stage: build
-    
+    script:
+      - echo "hello world" 
+unit-test:
+    stage: test
+    script:
+      - echo "hello test"
