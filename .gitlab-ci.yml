@@ -8,4 +8,6 @@ build app:
 unit-test:
     stage: test
     script:
-      - echo "hello test"
+      - echo "hello test" 
+    tags:
+      - ubuntu-ng
