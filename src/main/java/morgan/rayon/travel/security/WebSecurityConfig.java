@@ -12,48 +12,31 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 
 /**
  * N.B. WebSecurityConfigureAdapter: deprecated
+ * 
  * @author Rayon Morgan
  *
  */
 @Configuration
 public class WebSecurityConfig {
 
-//	@Bean
-//	public UserDetailsService userDetailsService() {
-//		var uds = new InMemoryUserDetailsManager();
-//		
-//		var u1 = User.withUsername("userme")
-//				.password("password")
-//				.authorities("read").build();
-//		
-//		uds.createUser(u1);
-//		
-//		return uds;
-//	}
-	
 	@Bean
 	public UserDetailsService userDetailsService() {
-		 return new CustomUserDetailsService();
+		return new CustomUserDetailsService();
 	}
-	
+
 	@Bean
-	public PasswordEncoder passEncoder()
-	{
+	public PasswordEncoder passEncoder() {
 		return NoOpPasswordEncoder.getInstance();
-		
+
 	}
-	
-	
-	  @Bean SecurityFilterChain myfilter(HttpSecurity http) throws Exception {
-	  http.csrf().disable();
-	  http.authorizeRequests()
-	 .anyRequest().authenticated()
-	 .and()
-	 .httpBasic();
-	  
-	  return http.build();
-	  
-	  }
-	 
+
+	@Bean
+	SecurityFilterChain myfilter(HttpSecurity http) throws Exception {
+		http.csrf().disable();
+		http.authorizeRequests().anyRequest().authenticated().and().httpBasic();
+
+		return http.build();
+
+	}
 
 }

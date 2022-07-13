@@ -1,0 +1,6 @@
+stages
+  - build
+  - test
+build app
+    stage: build
+    
