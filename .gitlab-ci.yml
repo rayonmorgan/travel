@@ -5,9 +5,12 @@ stages:
   - test
 build app:
     stage: build
-    script:
-      - echo "hello world"      
+    script: 
+      - echo "hello world"   
+      - whoami  
+      - chmod +x mvnw
       - ./mvnw clean 
+ 
     tags:
       - ubuntu-ng
     artifacts:
