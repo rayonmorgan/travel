@@ -7,6 +7,8 @@ build app:
     stage: build
     script:
       - echo "hello world" 
+    tags:
+      - ubuntu-ng
 unit-test:
     stage: test
     script:
