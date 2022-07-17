@@ -6,10 +6,8 @@ stages:
 build app:
     stage: build
     script:
-      - echo "hello world" 
-      - git update-index --chmod=+x mvnw
-      - ./mvnw clean
- 
+      - echo "hello world"      
+      - ./mvnw clean 
     tags:
       - ubuntu-ng
     artifacts:
