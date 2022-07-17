@@ -10,6 +10,7 @@ build app:
       - whoami  
       - chmod +x mvnw
       - ./mvnw clean 
+      - ./mvnw compile
     tags:
       - ubuntu-ng
     artifacts:
