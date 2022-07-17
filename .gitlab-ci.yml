@@ -7,8 +7,15 @@ build app:
     stage: build
     script:
       - echo "hello world" 
+      - mvn clean
+      - mvn build
     tags:
       - ubuntu-ng
+    artifcats:
+        paths:
+            - targets/*.war
+    only:
+        - develop
 unit-test:
     stage: test
     script:
