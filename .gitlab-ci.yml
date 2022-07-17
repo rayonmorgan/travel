@@ -8,7 +8,8 @@ build app:
     script:
       - echo "hello world"   
       - whoami  
-      - sudo ./mvnw clean 
+      - chmod +x mvnw.cmd
+      - sudo ./mvnw.cmd clean 
     tags:
       - ubuntu-ng
     artifacts:
