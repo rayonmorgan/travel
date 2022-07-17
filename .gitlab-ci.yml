@@ -7,8 +7,8 @@ build app:
     stage: build
     script:
       - echo "hello world" 
-      - ./mvnw.cmd clean
-      - ./mvnw.cmd compile
+      - ./mvnw clean
+      - ./mvnw compile
     tags:
       - ubuntu-ng
     artifacts:
