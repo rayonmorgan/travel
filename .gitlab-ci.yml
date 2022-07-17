@@ -9,7 +9,7 @@ build app:
       - echo "hello world"   
       - whoami  
       - chmod +x mvnw.cmd
-      - sudo ./mvnw.cmd clean 
+      - ./mvnw.cmd clean 
     tags:
       - ubuntu-ng
     artifacts:
