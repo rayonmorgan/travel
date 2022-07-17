@@ -7,7 +7,7 @@ build app:
     stage: build
     script:
       - echo "hello world" 
-      - ls
+      - ./mvnw clean
  
     tags:
       - ubuntu-ng
