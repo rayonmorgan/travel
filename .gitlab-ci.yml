@@ -11,7 +11,7 @@ build app:
       - mvn build
     tags:
       - ubuntu-ng
-    artifcats:
+    artifacts:
         paths:
             - targets/*.war
     only:
