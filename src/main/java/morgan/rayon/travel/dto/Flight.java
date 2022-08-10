@@ -6,6 +6,8 @@ public class Flight {
 	private String fromPort;
 	private String toPort;
 	private float price;
+	private String departTime;
+	private String arriveTime;
 	
 	public Flight()
 	{
@@ -19,15 +21,20 @@ public class Flight {
 		this.fromPort = flight.fromPort;
 		this.toPort = flight.toPort;
 		this.price = flight.price;
+		this.departTime = flight.departTime;
+		this.arriveTime = flight.arriveTime;
+		
 	}
 	
-	public Flight(int flightNumber, String airline, String fromPort, String toPort, float price) {
+	public Flight(int flightNumber, String airline, String fromPort, String toPort, float price,String departTime,String arriveTime) {
 		super();
 		this.flightNumber = flightNumber;
 		this.airline = airline;
 		this.fromPort = fromPort;
 		this.toPort = toPort;
 		this.price = price;
+		this.departTime = departTime;
+		this.arriveTime = arriveTime;
 	}
 
 	public int getFlightNumber() {
@@ -68,7 +75,23 @@ public class Flight {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public String getDepartTime() {
+		return departTime;
+	}
+
+	public void setDepartTime(String departTime) {
+		this.departTime = departTime;
+	}
+
+	public String getArriveTime() {
+		return arriveTime;
+	}
+
+	public void setArriveTime(String arriveTime) {
+		this.arriveTime = arriveTime;
 	}		
 	
-
+	
 }

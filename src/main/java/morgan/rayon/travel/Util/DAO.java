@@ -19,12 +19,12 @@ public class DAO {
 		List<Flight> flight_list = new ArrayList<Flight>();
 		
 		flight_list.add(
-					new Flight(23,"American Airline","JFK","NMI",4.3f)
+					new Flight(23,"American Airline","JFK","NMI",4.3f,"11:00 AM","1:00 PM")
 				);
 		
 		
 		flight_list.add(
-				new Flight(345,"Air Canada","Can","DSI",7.3f)
+				new Flight(345,"Air Canada","Can","DSI",7.3f,"9:15 PM","12:30 AM")
 			);
 		
 		
