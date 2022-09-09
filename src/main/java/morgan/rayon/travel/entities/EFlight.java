@@ -2,17 +2,34 @@ package morgan.rayon.travel.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class EFlight implements Serializable {
 	/**
-	 * 
+	 * 	 
 	 */
-	private static final long serialVersionUID = 1L;
-	private int flightNumber;
-	private String airline;
-	private String fromPort;
-	private String toPort;
-	private float price;
 
+	private static final long serialVersionUID = 1L;
+	@Id
+	@Column(name = "flightnumber")
+	private int flightNumber;
+	@Column(name = "airline")
+	private String airline;
+	@Column(name = "fromport")
+	private String fromPort;
+	@Column(name = "toport")
+	private String toPort;
+	@Column(name = "price")
+	private float price;
+	@Column(name = "departtime")
+	private String departTime;
+	@Column(name = "arrivetime")
+	private String arriveTime;
 
 	public EFlight() {
 
@@ -67,5 +84,20 @@ public class EFlight implements Serializable {
 		this.price = price;
 	}
 
+	public String getDepartTime() {
+		return departTime;
+	}
+
+	public void setDepartTime(String departTime) {
+		this.departTime = departTime;
+	}
+
+	public String getArriveTime() {
+		return arriveTime;
+	}
+
+	public void setArriveTime(String arriveTime) {
+		this.arriveTime = arriveTime;
+	}
 
 }

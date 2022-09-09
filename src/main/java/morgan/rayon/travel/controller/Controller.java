@@ -3,6 +3,7 @@ package morgan.rayon.travel.controller;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,15 +24,16 @@ import morgan.rayon.travel.dto.SearchFlight;
 //@CrossOrigin
 @RestController
 @RequestMapping(value="/api")
-public class Controller {	
-	 
+public class Controller {
+	  @Autowired
+	  private DAO dao;
 	
 	
 	//@CrossOrigin(origins="http://localhost:4200,http://127.0.0.1:4200",methods = {RequestMethod.POST,RequestMethod.GET,RequestMethod.OPTIONS,RequestMethod.HEAD})
 	@RequestMapping(value="/flight",method=RequestMethod.POST)
 	public List<Flight> flightSearch(@RequestBody SearchFlight searchFlight)
 	{
-		DAO dao = new DAO();
+		 
 		//search database for 
 		System.out.println(searchFlight.getPortFrom() + ' ' + searchFlight.getPortTo());
 		return dao.getFlightList(searchFlight);
@@ -48,7 +50,7 @@ public class Controller {
 	@RequestMapping(value="/confirm",method=RequestMethod.POST)
 	public Map<String,String> confirmPurchase(@RequestBody FlightPurchase flightPurchase)
 	{
-		DAO dao = new DAO();
+		//DAO dao = new DAO();
 		
 		return dao.makePurchase(flightPurchase) ;		
 	}
